@@ -27,7 +27,7 @@ public class AtmProducer {
     public static final int _MULTIPLES_OF = 10;
     public static final int _NUM_OF_OPERATIONS = 4;
     public static final int _MIN_SLEEP = 3000;
-    public static final int _MAX_SLEEP = 5000;
+    public static final int _MAX_SLEEP = 15000;
     public static final int _NUM_ATMS = 10;
 
     public static final String USER_SCHEMA = "{"
