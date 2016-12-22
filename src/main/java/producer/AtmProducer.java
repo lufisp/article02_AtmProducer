@@ -25,9 +25,9 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 public class AtmProducer {
 
     public static final int _MULTIPLES_OF = 10;
-    public static final int _NUM_OF_OPERATIONS = 4;
-    public static final int _MIN_SLEEP = 3000;
-    public static final int _MAX_SLEEP = 15000;
+    public static final int _NUM_OF_OPERATIONS = 40;
+    public static final int _MIN_SLEEP = 10000;
+    public static final int _MAX_SLEEP = 25000;
     public static final int _NUM_ATMS = 10;
 
     public static final String USER_SCHEMA = "{"
@@ -77,7 +77,7 @@ public class AtmProducer {
                 
                 GenericData.Record avroRecord = new GenericData.Record(schema);
                 avroRecord.put("id", id);
-                avroRecord.put("operValue", _MULTIPLES_OF * (1 + (int) Math.floor(Math.random() * 50)));
+                avroRecord.put("operValue", (-1) * _MULTIPLES_OF * (1 + (int) Math.floor(Math.random() * 50)));
 
                 byte[] bytes = recordInjection.apply(avroRecord);
 
